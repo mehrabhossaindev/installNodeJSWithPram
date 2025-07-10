@@ -15,6 +15,9 @@ runs:
       shell: bash
       run: echo "Run Composite"
       
+    - name: Checkout 
+      uses: actions/checkout@v4
+      
     - name: "Environment Setup"
       uses: actions/setup-node@v4
       with:
