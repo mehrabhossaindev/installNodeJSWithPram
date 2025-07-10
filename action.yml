@@ -1,0 +1,21 @@
+name: Composite Action With Parameter
+
+inputs:
+  nodeJsVersion:
+    description: Version of Node JS
+    required: false
+    default: '22'
+
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: "Run Composite Action"
+      shell: bash
+      run: echo "Run Composite"
+      
+    - name: "Environment Setup"
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
