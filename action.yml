@@ -9,15 +9,15 @@ inputs:
 outputs:
   repoOwner:
     description: "Repository Owner"
-	  value: ${{steps.vars.outputs.RepositoryOwner}}
+    value: ${{steps.vars.outputs.RepositoryOwner}}
    
   defaultBranch:
     description: "Default Branch"
-	  value: ${{steps.vars.outputs.DefaultBranch}}
+    value: ${{steps.vars.outputs.DefaultBranch}}
 
   cicdKey:
     description: "CI CD Key"
-	  value: ${{steps.vars.outputs.CICDKey}}
+    value: ${{steps.vars.outputs.CICDKey}}
  
 
 runs:
