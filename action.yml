@@ -4,21 +4,7 @@ inputs:
   nodeJsVersion:
     description: Version of Node JS
     required: false
-    default: '22'
-
-outputs:
-  repoOwner:
-    description: "Repository Owner"
-    value: ${{steps.vars.outputs.RepositoryOwner}}
-   
-  defaultBranch:
-    description: "Default Branch"
-    value: ${{steps.vars.outputs.DefaultBranch}}
-
-  cicdKey:
-    description: "CI CD Key"
-    value: ${{steps.vars.outputs.CICDKey}}
- 
+    default: '22' 
 
 runs:
   using: "composite"
@@ -35,11 +21,3 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{inputs.nodeJsVersion}}
-    
-    - name: Variables
-      id: vars
-      shell: bash
-      run: |
-        echo "RepositoryOwner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
-	echo "DefaultBranch=main" >> $GITHUB_OUTPUT
-        echo "CICDKey=InterviewProCICDKey" >> $GITHUB_OUTPUT
