@@ -21,4 +21,4 @@ runs:
     - name: "Environment Setup"
       uses: actions/setup-node@v4
       with:
-        node-version: 22
+        node-version: ${{inputs.nodeJsVersion}}
